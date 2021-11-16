@@ -21,6 +21,7 @@ h1 {
   position: relative;
   width: max-content;
   width: max-content;
+  
 }
 h1::before,
 h1::after {
@@ -74,3 +75,48 @@ h1::before {
     transform: translateY(0);
   }
 }
+
+.btns {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn-box {
+  position: relative;
+  width: fit-content;
+  height: auto;
+  overflow: hidden;
+}
+
+.btn-box > img {
+  width: fit-content;
+  height: auto;
+  
+}
+.btn-box:hover .btn-text{
+  visibility:visible;
+  opacity: 1;
+  color: white;
+  background-color:hsla(170, 100%, 0%, 0.35);
+}
+
+.btn-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; 
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+  font-size: 40px;
+  transition: opacity .2s, visibility .2s;
+}
+
+
